@@ -1,0 +1,43 @@
+{
+  "name": "mpa-vts",
+  "version": "0.1.0",
+  "description": "Multi-page App: Vanilla TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "copy:assets:dev": "cp assets/* dev",
+    "copy:assets:min": "cp assets/* min",
+    "copy:css": "cp src/styles/*.css dev && cp src/base.css dev",
+    "make:html": "node mkhtml.js",
+    "watch:ts": "tsc --watch",
+    "compile:ts": "tsc",
+    "predev": "mkdir -p dev",
+    "dev": "npm run copy:assets:dev && npm run copy:css && npm run compile:ts && npm run make:html",
+    "postdev": "serve dev",
+    "min:html": "html-minifier --input-dir dev --output-dir min --case-sensitive --collapse-whitespace --keep-closing-slash --conservative-collapse --remove-comments --file-ext html",
+    "min:css": "lightningcss --minify dev/*.css --output-dir min",
+    "min:js": "esbuild dev/*.js --minify --outdir=min",
+    "prebuild": "mkdir -p min",
+    "build": "npm run copy:assets:min && min:html && min:css && min:js",
+    "postbuild": "serve min"
+  },
+  "author": "davidhartsough",
+  "license": "ISC",
+  "homepage": "https://example.com",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "cheerio": "^1.0.0-rc.12",
+    "esbuild": "^0.19.5",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "glob": "^10.3.10",
+    "html-minifier": "^4.0.0",
+    "lightningcss": "^1.22.1",
+    "prettier": "^3.0.3",
+    "serve": "^14.2.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}

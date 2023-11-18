@@ -1,0 +1,81 @@
+main {
+  margin: auto;
+  max-width: 26rem;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0 0 0.5rem;
+}
+
+label {
+  display: block;
+  margin: 0.75rem 0;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  overflow: visible;
+}
+
+input {
+  display: block;
+  height: 2rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  outline: none;
+  width: 100%;
+  margin: 0.25rem 0;
+}
+
+.button,
+button {
+  text-transform: none;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.15;
+  letter-spacing: 0.025rem;
+  border-radius: 0.25rem;
+  border: 1px solid #aaa;
+  background-color: #fcfcfd;
+  color: #333;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  width: auto;
+  height: auto;
+  margin: 0;
+  min-width: 6rem;
+}
+
+button:hover,
+.button:hover,
+button:focus,
+.button:focus {
+  text-decoration: none;
+  border-color: #555;
+  color: #000;
+  background-color: #f7f7f8;
+}
+
+button:disabled {
+  background: #f0f0f0;
+  cursor: not-allowed;
+  color: #aaa;
+  border-color: #ccc;
+}

@@ -1,0 +1,94 @@
+<head>
+  <title>The Amazing Color App</title>
+  <meta
+    name="description"
+    content="This is the Amazing Color App, nested as an example inside the MPA."
+  />
+  <link rel="stylesheet" href="/app.css" />
+  <link rel="stylesheet" href="/list.css" />
+</head>
+<body>
+  <main>
+    <section>
+      <header>
+        <h1>Colors</h1>
+      </header>
+      <label class="search">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="search-icon"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input id="search" type="search" placeholder="Search" />
+      </label>
+      <div class="sort">
+        <div class="sort-item" id="name-sort">
+          Name
+          <span id="name-sort-icon" class="hide">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon sort-icon"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+          </span>
+        </div>
+        <div class="sort-item" id="hue-sort">
+          <span id="hue-sort-icon" class="hide">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon sort-icon"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <polyline points="19 12 12 19 5 12" />
+            </svg>
+          </span>
+          Hue
+        </div>
+      </div>
+      <div id="list"></div>
+    </section>
+    <footer>
+      <a href="/create" class="button">Create</a>
+      <button id="generate">Generate</button>
+    </footer>
+  </main>
+  <template id="color-list-item-template">
+    <div class="list-item">
+      <a href="/color/?c=0" class="list-item-link">
+        <span class="color-item-name"></span>
+        <span class="color-item-hue"></span>
+      </a>
+    </div>
+  </template>
+  <script type="module" src="/generate.js"></script>
+  <script type="module" src="/store.js"></script>
+  <script type="module" src="/app.js"></script>
+</body>

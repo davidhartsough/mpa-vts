@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 3rem;
+  color: #fff;
+  word-wrap: break-word;
+  max-width: 100%;
+  padding: 0 0.5rem;
+  line-height: 1;
+}

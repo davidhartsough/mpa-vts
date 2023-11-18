@@ -1,0 +1,40 @@
+<head>
+  <title>Create a new color</title>
+  <meta
+    name="description"
+    content="Go on and create a new color with this incredible color creation tool!"
+  />
+  <link rel="stylesheet" href="/app.css" />
+  <link rel="stylesheet" href="/create.css" />
+</head>
+<body>
+  <main>
+    <section>
+      <header>
+        <h1>Create</h1>
+      </header>
+      <form>
+        <label>
+          Name
+          <input type="text" id="name" placeholder="Name" required autofocus />
+        </label>
+        <label>
+          Hue
+          <input
+            id="hue"
+            type="number"
+            placeholder="0"
+            min="0"
+            max="359"
+            step="1"
+            required
+          />
+        </label>
+        <button type="submit" class="submit">Create new color</button>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="/generate.js"></script>
+  <script type="module" src="/store.js"></script>
+  <script type="module" src="/create.js"></script>
+</body>
